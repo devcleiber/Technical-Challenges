@@ -147,20 +147,6 @@ Mais tecnologias serão adicionadas conforme meus estudos avançarem.
 
 ---
 
-## 📊 Challenge Progress | Progresso dos Desafios
-
-| Challenge | Status |
-|---|---|
-| Challenge #001 | ⬜ Not Started |
-| Challenge #002 | ⬜ Not Started |
-| Challenge #003 | ⬜ Not Started |
-
-This section will be updated as new challenges are completed.
-
-Esta seção será atualizada conforme novos desafios forem concluídos.
-
----
-
 ## 👨‍💻 Author | Autor
 
 ### Cleiber Vieira
