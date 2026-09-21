@@ -5,7 +5,6 @@ public class Employeer {
     private int age;
     private double salary;
     private String function;
-    private double amount;
 
     public Employeer() {
         this.name = "";
@@ -14,69 +13,82 @@ public class Employeer {
         this.function = "";
     }
 
-    public Employeer(String name, int age) {
-        this.name = name;
-        this.age = age;
+    public Employeer(String name, String function) {
+        setName(name);
+        setFunction(function);
     }
     public Employeer(String name, int age, double salary) {
-        this.name = name;
-        this.age = age;
-        this.salary = salary;
+        setName(name);
+        setAge(age);
+        setSalary (salary);
     }
     public Employeer(String name, int age, double salary, String function) {
-        this.name = name;
-        this.age = age;
-        this.salary = salary;
-        this.function = function;
+        setName(name);
+        setAge(age);
+        setSalary(salary);
+        setFunction(function);
     }
 
     // Getters and Setters
     public String getName() {
         return name;
     }
-
     public void setName(String name) {
-        this.name = name;
-        if (name== null) {
+        if (name== null || name.trim().isEmpty()) {
             System.out.println("Name cannot be empty");
-            System.out.println("Name dont's vazio");
+            return;
         }
+        this.name = name;
     }
-
     public int getAge() {
         return age;
     }
-
     public void setAge(int age) {
-        this.age = age;
         if (age < 0) {
             System.out.println("Age cannot be negative");
-            this.age = 0;
+            return;
         }else if (age < 18) {
             System.out.println("Age must be at least 18");
+            return;
         }
+        this.age = age;
     }
-
     public double getSalary() {
         return salary;
     }
-
+    public void setSalary(double salary){
+        if (salary < 0){
+            System.out.println("Salary cannot be negative");
+            return;
+        }
+        this.salary = salary;
+    }
+    public String getFunction() {
+        return function;
+    }
+    public void setFunction(String function) {
+        if (function == null || function.trim().isEmpty()) {
+            System.out.println("Function cannot be empty");
+            return;
+        }
+        this.function = function;
+    }
     public void displayInfo(){
-        System.out.println("Name: " + name);
-        System.out.println("Age: " + age);
-        System.out.println("Salary: " + salary);
-        System.out.println("Function: " + function);
+        System.out.println("Name: " + this.name);
+        System.out.println("Age: " + this.age);
+        System.out.println("Salary: " + this.salary);
+        System.out.println("Function: " + this.function);
     }
     public void addedAmount (double amount) {
-        if (amount < 0) {
+        if (amount <= 0) {
             System.out.println("Amount cannot be negative");
+            return;
         } else {
-            this.salary += (this.salary * amount / 100);
+            this.salary = this.salary + (this.salary * amount / 100);
         }
     }
-    public void newFunction(String function){
-        this.function = function;
-
+    public boolean isAdult() {
+        return this.age >= 18;
     }
 
 }
