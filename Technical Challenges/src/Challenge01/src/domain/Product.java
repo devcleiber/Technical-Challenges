@@ -9,56 +9,68 @@ public class Product {
     public String getName() {
         return name;
     }
+
     public double getPrice() {
         return price;
     }
+
     public int getQuantity() {
         return quantity;
     }
+
     public void setName(String name) {
         this.name = name;
     }
-    public void setPrice(double price){
+
+    public void setPrice(double price) {
         this.price = price;
-        if (price < 0){
-            System.out.println("Price's be dont negative");}
+        if (price < 0) {
+            System.out.println("Price's be dont negative");
+            this.price = 0;
+        }
     }
-    public void setQuantity(int quantity){
+
+    public void setQuantity(int quantity) {
         this.quantity = quantity;
         if (quantity < 0) {
-            System.out.println("Quantity wont's be negative"); }
+            System.out.println("Quantity wont's be negative");
+            this.quantity = 0;
+        }
     }
+
     public void displayProductInfo() {
         System.out.println("Product Name: " + getName());
         System.out.println("Price: $" + getPrice());
         System.out.println("Quantity: " + getQuantity());
     }
-    public void addedStock(int additional){
+
+    public void addedStock(int additional) {
         if (additional > 0) {
             quantity += additional;
             System.out.println("Added " + additional + " units to stock.");
         } else {
+            quantity += 0;
             System.out.println("Invalid quantity to add.");
         }
     }
-    public void removeStock(int remove){
+
+    public void removeStock(int remove) {
         if (remove > 0) {
             if (remove <= quantity) {
                 quantity -= remove;
                 System.out.println("Removed " + remove + " units from stock.");
             } else {
+                quantity -= 0;
                 System.out.println("Not enough units in stock.");
             }
         } else {
             System.out.println("Invalid quantity to remove.");
         }
     }
+
     public double getTotalPrice() {
         return price * quantity;
     }
 
-
-    //public void CreateProduct(){
-        // Implement the logic to register a product }//
 }
 
