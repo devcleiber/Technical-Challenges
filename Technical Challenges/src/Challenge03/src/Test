@@ -1,0 +1,282 @@
+💻 Teste Técnico #03 — Sistema de Conta Bancária
+
+Você foi encarregado de desenvolver uma classe responsável por representar uma conta bancária simples.
+
+O sistema precisa impedir operações que deixem a conta em um estado inválido.
+
+## Requisitos:
+
+### Classe `BankAccount`
+
+Crie os seguintes atributos privados:
+
+```java
+private String holder;
+private int accountNumber;
+private double balance;
+```
+
+### 1. Construtor completo
+
+Deve receber:
+
+```
+holder
+accountNumber
+balance
+```
+
+E utilizar os métodos apropriados para validar os dados.
+
+---
+
+### 2. Construtor simplificado
+
+Deve receber somente:
+
+```text
+holder
+accountNumber
+```
+
+Nesse caso:
+
+```text
+balance = 0
+```
+
+---
+
+### 3. Validação do titular
+
+O titular:
+
+- não pode ser `null`;
+- não pode ser vazio;
+- não pode conter apenas espaços.
+
+Caso seja inválido, **não altere o atributo**.
+
+---
+
+### 4. Validação do número da conta
+
+O número da conta deve ser **maior que zero**.
+
+Exemplo:
+
+```text
+1001 → válido
+1    → válido
+0    → inválido
+-10  → inválido
+```
+
+---
+
+### 5. Validação do saldo
+
+O saldo inicial não pode ser negativo.
+
+```text
+500   → válido
+0     → válido
+-100  → inválido
+```
+
+---
+
+# 6. Método `deposit()`
+
+Crie:
+
+```java
+public void deposit(double amount)
+```
+
+Regras:
+
+- o valor deve ser **maior que zero**;
+- se for válido, adicionar ao saldo;
+- se for inválido, não alterar o saldo;
+- exibir uma mensagem informando o resultado.
+
+---
+
+# 7. Método `withdraw()`
+
+Crie:
+
+```java
+public void withdraw(double amount)
+```
+
+Regras:
+
+- valor deve ser maior que zero;
+- não pode sacar um valor maior que o saldo disponível;
+- se for válido, subtrair do saldo;
+- se for inválido, não alterar o saldo;
+- informar o resultado.
+
+Exemplo:
+
+```text
+Saldo: 500
+
+withdraw(200)
+→ saldo = 300
+
+withdraw(400)
+→ rejeitado
+→ saldo continua 300
+```
+
+---
+
+# 8. Método `boolean`
+
+Crie:
+
+```java
+public boolean hasBalance()
+```
+
+Ele deve retornar:
+
+```text
+true  → se o saldo for maior que zero
+false → se o saldo for igual a zero
+```
+
+Não precisa imprimir nada dentro desse método.
+
+---
+
+# 9. Método de informação
+
+Crie:
+
+```java
+public void displayAccountInfo()
+```
+
+Deve exibir:
+
+```text
+Account Holder: ...
+Account Number: ...
+Balance: ...
+```
+
+---
+
+# 10. Main — obrigatório
+
+No `Main`, demonstre **todos os comportamentos importantes**.
+
+Você deve testar:
+
+### Conta válida
+
+Uma conta criada corretamente.
+
+### Construtor simplificado
+
+Crie outra conta usando somente:
+
+```text
+holder + accountNumber
+```
+
+e demonstre que o saldo começa em `0`.
+
+### Dados inválidos
+
+Faça pelo menos:
+
+```text
+titular inválido
+número inválido
+saldo inicial negativo
+```
+
+### Depósito
+
+Teste:
+
+```text
+depósito válido
+depósito inválido
+```
+
+### Saque
+
+Teste:
+
+```text
+saque válido
+saque maior que o saldo
+saque inválido
+```
+
+### Boolean
+
+Demonstre o resultado de:
+
+```java
+hasBalance()
+```
+
+---
+
+# Regras da avaliação
+
+Aqui começa uma parte importante.
+
+**Não vou te dar a estrutura da classe.**
+
+Você precisa decidir:
+
+- quais getters precisa;
+- como organizar os métodos;
+- como fazer as validações;
+- como lidar com os valores inválidos;
+- como testar.
+
+Pode consultar **conceitos que você já estudou**, inclusive me perguntar alguma coisa se realmente travar.
+
+Mas se consultar o mentor, **me diga depois exatamente o que você perguntou e o que entendeu**. Vou considerar isso na avaliação de autonomia.
+
+### Critério especial deste teste
+
+Vou observar se você consegue evitar os erros do #02:
+
+```text
+❌ atribuir antes de validar
+❌ esquecer parte do requisito
+❌ criar construtor com parâmetros errados
+❌ aceitar estado inválido
+❌ colocar código desnecessário
+❌ esquecer de testar casos inválidos
+```
+
+E agora tem uma exigência nova:
+
+> **Você precisa pensar no estado da conta depois de cada operação.**
+
+Não quero apenas:
+
+```text
+"o método executou"
+```
+
+Quero:
+
+```text
+"o método executou e o objeto ficou em um estado correto."
+```
+
+**Sem solução, sem esqueleto pronto.**
+
+Manda a implementação quando terminar. Aí entra o modo **recrutador sem dó**.
