@@ -1,0 +1,24 @@
+# 🔴 CHALLENGE 04 — Cadastro de Jogadores
+
+**Base real:** teste técnico da **UOL Host**, criado para avaliar conhecimentos de Java, POO e boas práticas.
+O desafio original envolve cadastro de jogadores, listas de codinomes e leitura de XML/JSON;
+como você ainda não estudou essas tecnologias, esta é uma **adaptação para o seu nível atual**,
+mantendo a regra de negócio central.
+
+### Enunciado
+
+Crie um sistema Java para **cadastrar jogadores**. Cada jogador deve possuir `name`, `email`, `phone` e `nickname`.
+O nome e o e-mail são obrigatórios, o telefone é opcional e o jogador só pode ser cadastrado se seu `nickname`
+pertencer a uma das duas categorias disponíveis: **“Os Vingadores”** ou **“A Liga da Justiça”**. Crie uma classe para
+representar o jogador, mantenha seus atributos encapsulados e utilize construtor(es), getters/setters e
+métodos necessários para validar e exibir os dados. Na `Main`, cadastre jogadores válidos e tente cadastrar
+jogadores com nome vazio, e-mail vazio ou nickname inválido,
+demonstrando que dados inválidos não devem ser aceitos pelo objeto.
+
+**O que NÃO entra neste desafio:** XML, JSON, `List`, arquivos, banco de dados ou Spring. Esses requisitos pertencem
+ao desafio original, mas ainda não fazem parte do seu conteúdo estudado.
+
+**Objetivo:** testar se você consegue pegar uma **regra de negócio real** e transformá-la em uma classe Java bem
+encapsulada, sem eu te entregar a estrutura.
+
+Quando terminar, manda **FINISH**.
