@@ -102,14 +102,6 @@ The purpose of this repository is to maintain consistent practice and document m
 
 O objetivo deste repositório é manter uma rotina consistente de prática e documentar minha evolução técnica.
 
-| Metric | Goal |
-|---|---:|
-| Daily Challenges | 3 |
-| Main Language | Java |
-| Focus | Problem Solving |
-| Purpose | Technical Interview Preparation |
-
----
 
 ## 🔥 Learning Philosophy | Filosofia de Aprendizado
 
