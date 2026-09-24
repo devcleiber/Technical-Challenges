@@ -1,0 +1,63 @@
+Let's go. Today, I’m sticking to the rule we agreed on: **a real challenge from a real company/program that aligns with what you’ve already studied.**
+
+## 🔴 Today's Challenge — GFT Start #5 Java
+
+I found a technical challenge documented as the **GFT Start #5 Technical Challenge**, linked to the **GFT Start Java** program. The materials themselves list basic Java, Git/GitHub, and an understanding of OOP as prerequisites.
+
+And the best part: **the challenge includes exactly one exercise that fits perfectly with where you are right now.**
+
+### 🐒 Challenge: Monkey Class
+
+The actual prompt asks you to create a class that models a monkey, featuring:
+
+- `nome` (name)
+- `bucho` (stomach)
+- `comer` method (eat)
+- `verBucho` method (view stomach contents)
+- `digerir` method (digest)
+
+Challenge rules:
+
+1. Create **2 monkeys**.
+2. The stomach can hold a maximum of **3 food items**.
+3. The `comer` method must check if there is still space available.
+4. The `digerir` method must empty the stomach.
+5. Food items are represented as `String`s.
+6. The program must allow for interactive testing of the class.
+
+### What you can use
+
+You can use **only what you already know**.
+
+Specifically:
+
+```text
+class
+attributes
+objects
+methods
+parameters
+encapsulation
+constructors
+if/else
+loops
+String
+```
+
+**No need for Spring, databases, APIs, Collections, etc.**
+
+### 🎯 What I want to evaluate
+
+I won't give you the implementation. I want to see you transform the problem statement into:
+
+**Requirements → attributes → methods → rules → code → tests.**
+
+And there is an important rule for today:
+
+> **Before sending me "FINISH", compile and test the program.**
+
+This is especially important after what happened in Challenge 04.
+
+The source I found is the public material from **GFT Start #5 Java**, which identifies the exercise within the program's technical challenge section. :chatgpt-content-reference{index="2"}
+
+**This is today's Challenge. You may begin.**
