@@ -1,0 +1,27 @@
+Challenge 02 — Santander Bootcamp 2023: Abrindo Contas
+É um desafio real do Santander Bootcamp 2023 — Fullstack Java + Angular, em parceria com a DIO.
+A existência do desafio e sua posição como desafio Java #1 do bootcamp
+estão documentadas publicamente. GitHub
+
+Enunciado
+Você deve criar um programa em Java que leia os dados de uma conta bancária e,
+utilizando esses dados, crie uma conta e apresente suas informações.
+O programa deve receber:
+- Número da conta — int
+- Nome do titular — String
+- Saldo — double
+
+Depois, deve criar uma instância de ContaBancaria utilizando os valores recebidos.
+Por fim, deve imprimir:
+
+Informacoes:
+- Conta: [número da conta]
+- Titular: [nome do titular]
+- Saldo: R$ [saldo]
+
+A classe ContaBancaria deve possuir:
+- numero
+- titular
+- saldo
+
+e um construtor que receba esses três valores.
